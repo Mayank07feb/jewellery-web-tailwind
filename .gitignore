@@ -1,0 +1,25 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore compiled files
+*.log
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore IDE/Editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore environment-specific files
+.env
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
