@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  command = ""
+
+# Optional: Set up redirects if needed
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
