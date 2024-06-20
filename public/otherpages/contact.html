@@ -5,206 +5,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="/src/styles.css">
-</head>
 
+</head>
 
 <body>
 
-
-
-    <!--Header Start-->
-    <header class="bg-black text-white py-4 px-8 flex justify-between items-center">
-        <div class="text-2xl font-bold text-yellow-500">
-            Carat Gallery
-        </div>
-        <nav class="hidden md:flex space-x-8">
-            <a href="../index.html" class="hover:text-yellow-500">HOME</a>
-            <a href="./about.html" class="hover:text-yellow-500">ABOUT</a>
-            <a href="./gallery.html" class="hover:text-yellow-500">CARAT GALLERY CLUB</a>
-            <a href="./collection.html" class="hover:text-yellow-500">COLLECTION</a>
-            <a href="#" class="hover:text-yellow-500">CONTACT</a>
+    <!-- Header Start-->
+    <header id="site-header"
+        class="bg-yellow-600 text-white p-2 flex justify-between fixed items-center w-full top-0 z-50">
+        <nav class="flex space-x-4 sm:space-x-10 ml-4 sm:ml-24">
+            <a href="#" class="hover:text-orange-500" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
+            <a href="#" class="hover:text-orange-500" aria-label="Facebook"><span class="fab fa-facebook"></span></a>
+            <a href="#" class="hover:text-orange-500" aria-label="Twitter"><span class="fab fa-twitter"></span></a>
         </nav>
-        <a href="#"
-            class="hidden md:inline-block bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
-            Get A Quote
-        </a>
-        <button id="menu-toggle" class="md:hidden text-yellow-500 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
+        <div class="hidden sm:flex items-center space-x-2">
+            <span class="font-bold">0450165205</span>
+            <a href="#" aria-label="Account" class="material-icons hover:text-orange-500">person</a>
+        </div>
+        <div class="sm:hidden">
+            <a href="#" aria-label="Account" class="material-icons hover:text-orange-500">person</a>
+        </div>
     </header>
-    <nav id="mobile-menu" class="hidden md:hidden bg-black text-white space-y-4 px-8 py-4">
-        <a href="../index.html" class="block hover:text-yellow-500">HOME</a>
-        <a href="./about.html" class="block hover:text-yellow-500">ABOUT</a>
-        <a href="./gallery.html" class="block hover:text-yellow-500">CARAT GALLERY CLUB</a>
-        <a href="./collection.html" class="block hover:text-yellow-500">COLLECTION</a>
-        <a href="#" class="block hover:text-yellow-500">CONTACT</a>
-        <a href="#"
-            class="block bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
-            Get A Quote
-        </a>
+    <!-- Header End-->
+
+    <!-- Navbar -->
+    <nav class="bg-red-50 shadow-lg fixed w-full top-10 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#"><img src="../assets/logo.png" alt="Logo" class="h-16"></a>
+            <div class="flex flex-1 justify-center items-center">
+                <ul class="hidden md:flex space-x-8 text-blue-500 text-lg">
+                    <li><a href="../index.html" class="hover:text-orange-500">HOME</a></li>
+                    <li><a href="./about.html" class="hover:text-orange-500">ABOUT</a></li>
+                    <li><a href="./services.html" class="hover:text-orange-500">SERVICES</a></li>
+                    <li><a href="#" class="hover:text-orange-500">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#"
+                    class="hidden md:block bg-yellow-600 text-white py-2 px-4 rounded-full hover:bg-orange-500">Get FREE
+                    Estimate</a>
+                <button id="menu-button" class="md:hidden text-blue-500 focus:outline-none">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul class="text-blue-500 flex flex-col space-y-4 p-4">
+                <li><a href="../index.html" class="hover:text-orange-500">HOME</a></li>
+                <li><a href="./about.html" class="hover:text-orange-500">ABOUT</a></li>
+                <li><a href="./services.html" class="hover:text-orange-500">SERVICES</a></li>
+                <li><a href="#" class="hover:text-orange-500">CONTACT</a></li>
+                <li><a href="#" class="bg-yellow-600 text-white py-2 px-4 rounded-full hover:bg-orange-500">Get FREE
+                        Estimate</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!--Header End-->
-
-    <main id="main-content">
 
 
+    <!-- Main Content -->
+    <main class="mt-32">
 
-        <!--Map Start-->
 
+        <!--ANY KIND OF CAR YOU WILL GET Start-->
 
-        <div class="bg-gray-100 text-gray-500 py-6">
-            <div class="container mx-auto">
-                <h2 class="text-2xl font-bold mb-4 text-center">Interactive Map</h2>
-                <div class="w-full h-96 md:h-400px">
-                    <!-- Replace the src attribute with your map embed code -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.8977999071974!2d-122.41941548468712!3d37.77492997975781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e59009e0f03%3A0x73a9d81f161674f!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1628561587444!5m2!1sen!2sus"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="relative">
+            <div class="comeback">
+                <div class="bg-item1 h-screen flex items-center relative">
+                    <div class="container mx-auto text-center text-white relative z-10 px-4">
+                        <span class="block text-yellow-400 text-2xl font-bold sm:text-xl mb-2">ANY KIND OF CAR YOU WILL
+                            GET</span>
+                        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">CONTACT US</h1>
+                        <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4 mt-10">
+                            <a href="contact.html"
+                                class="bg-yellow-500 hover:bg-orange-500 font-bold text-2xl text-white py-2 px-8 rounded-xl">SERVICES</a>
+                            <a href="contact.html"
+                                class="bg-blue-500 hover:bg-orange-500 font-bold text-2xl text-white py-2 px-8 rounded-xl">ENQUIRY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto px-4 lg:px-40 comefront relative z-20" style="margin-top: -30px;">
+                <div class="flex flex-wrap justify-center items-center bg-white shadow-lg rounded-2xl p-4 md:p-6"
+                    style="z-index: 10; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);">
+                    <div class="w-full md:w-auto flex-shrink-0 mb-4 md:mb-0">
+                        <img src="../assets/yeelowcar.png" alt="Yellow Car" class="mx-auto h-32 md:h-44">
+                    </div>
+                    <div class="mx-6 text-center">
+                        <h3 class="text-xl md:text-2xl font-bold mb-2">GET YOUR FREE ESTIMATE NOW</h3>
+                        <h4 class="text-md md:text-lg text-yellow-500 font-bold mb-2">SIMPLY SEND US PHOTOS OF THE
+                            DAMAGE!</h4>
+                        <h5 class="text-sm md:text-base mb-2">quote@mobilesmashrepair.com</h5>
+                        <h5 class="text-sm md:text-base mb-4">OR</h5>
+                        <button class="bg-yellow-500 hover:bg-orange-500 text-white py-2 px-4 rounded-full">CLICK
+                            HERE</button>
+                    </div>
+                    <div class="w-full md:w-auto flex-shrink-0 mt-4 md:mt-0">
+                        <img src="../assets/bluecar.png" alt="Blue Car" class="mx-auto h-32 md:h-44">
+                    </div>
                 </div>
             </div>
         </div>
 
-
-        <!--Map End-->
+        <!--ANY KIND OF CAR YOU WILL GET End-->
 
         <!--Contact Form Start-->
 
-        <div class="bg-gray-300">
-            <div class="w-full flex items-center justify-center py-12">
-                <div class="w-full max-w-4xl bg-gray-800 text-white p-8 rounded-lg shadow-lg">
-                    <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
-                    <p class="text-center mb-8">We collaborate with ambitious brands and people; we’d love to build
-                        something great together.</p>
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <input type="text" placeholder="Name *"
-                                class="w-full p-4 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                            <input type="email" placeholder="Email *"
-                                class="w-full p-4 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                            <input type="tel" placeholder="Mobile No *"
-                                class="w-full p-4 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+        <div class="container mx-auto p-4">
+            <div class="rounded-lg p-6 md:flex">
+                <div class="md:w-2/3 md:pr-8">
+                    <h2 class="text-5xl font-bold text-blue-400 mb-4">Send Us A Message</h2>
+                    <p class="text-sm font-semibold mb-4">Attach a few images for a quick quotation</p>
+
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="name">Name</label>
+                            <input class="w-full px-3 py-2 border rounded-md" type="text" id="name" name="name">
                         </div>
-                        <textarea placeholder="Message *" rows="4"
-                            class="w-full p-4 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
-                        <div class="flex justify-center">
-                            <button type="submit"
-                                class="bg-yellow-500 text-gray-900 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-600 transition duration-300">SUBMIT</button>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="phone">Phone</label>
+                            <input class="w-full px-3 py-2 border rounded-md" type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="email">Email</label>
+                            <input class="w-full px-3 py-2 border rounded-md" type="email" id="email" name="email">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="suburb">Suburb</label>
+                            <input class="w-full px-3 py-2 border rounded-md" type="text" id="suburb" name="suburb">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="message">Comment or Message</label>
+                            <textarea class="w-full px-3 py-2 border rounded-md" id="message" name="message"
+                                rows="4"></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="images">Upload Images</label>
+                            <input class="w-full px-3 py-2 border rounded-md" type="file" id="images" name="images"
+                                multiple>
+                        </div>
+
+                        <div class="mb-4">
+                            <button class="bg-yellow-500 px-10 py-4 font-bold text-xl" type="submit">Submit</button>
                         </div>
                     </form>
+                </div>
+
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-yellow-400 w-16 h-16 flex items-center justify-center rounded-md mr-4">
+                            <span class="material-icons text-white">location_on</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-500">Address</h3>
+                            <p class="text-gray-700">Melbourne, Australia</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mb-6">
+                        <div class="bg-yellow-400 w-16 h-16 flex items-center justify-center rounded-md mr-4">
+                            <span class="material-icons text-white">phone</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-500">Phone</h3>
+                            <p class="text-gray-700">0450 165 205</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="bg-yellow-400 w-16 h-16 flex items-center justify-center rounded-md mr-4">
+                            <span class="material-icons text-white">camera_alt</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-500">Instagram</h3>
+                            <p class="text-gray-700">@mobilesmashrepair</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--Contact Form End-->
 
+
+
+
+
+
+
     </main>
 
-
-
-    <!-- Footer Start -->
-
-
-    <footer class="bg-black text-white py-8">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="text-gray-300">
-                <h2 class="text-lg font-bold mb-4">About</h2>
-                <p>We are the 5th generation having paternal business since 1940, has made it their mission to strive
-                    every day to earn the confidence and trust of our clients by meeting and exceeding their
-                    expectations of quality, service, and unsurpassed value.</p>
-            </div>
-            <div class="text-gray-300">
-                <h2 class="text-lg font-bold mb-4">MENU</h2>
-                <ul class="space-y-2">
-                    <li><a href="../index.html" class="hover-golden">Home</a></li>
-                    <li><a href="./about.html" class="hover-golden">About</a></li>
-                    <li><a href="./gallery.html" class="hover-golden">Carat Gallery Club</a></li>
-                    <li><a href="./collection.html" class="hover-golden">Collection</a></li>
-                    <li><a href="#" class="hover-golden">Contact</a></li>
-                </ul>
-            </div>
-            <div class="text-gray-300">
-                <h2 class="text-lg font-bold mb-4">CONTACT US</h2>
-                <address>
-                    <p><strong>Carat Gallery</strong><br>
-                        Arya Nagar, Gorakhpur, Uttar Pradesh,<br>
-                        India, Pin Code: 273001</p>
-                    <p>Mobile No:<br>
-                        <a href="tel:+917800101010" class="hover-golden">+91 7800101010</a>
-                    </p>
-                </address>
-            </div>
+    <footer class="text-white py-8 footer-bg">
+        <!-- Logo and Title -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start px-4 md:px-0">
+            <img src="../assets/logo.png" alt="Mobile Smash Repair Logo" class="h-24 w-auto mb-4 md:mb-2 md:ml-16">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-4 md:ml-10 text-center md:text-left">
+                ON-SITE PROFESSIONAL <br> CAR BODY WORKS
+            </h2>
         </div>
-        <div
-            class="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>Copyright © 1940 - 2024 <strong>Carat Gallery</strong>. All Rights Reserved.</p>
-            <p>Design & Developed By <a href="#" class="hover-golden">CodesGesture</a></p>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div class="mt-6 md:mt-10 text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">CONTACT INFO</h3>
+                    <p class="text-lg"><span class="font-bold">Phone No:</span> 0450165205</p>
+                    <p class="text-lg"><span class="font-bold">Email:</span> quote@mobilesmashrepair.com</p>
+                    <a href="#"
+                        class="bg-yellow-500 text-white py-2 font-semibold px-4 rounded-md hover-effect mt-4 inline-block">Get
+                        FREE Estimate</a>
+                    <div class="flex justify-center md:justify-start items-center mt-8 space-x-4">
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+                <!-- Our Service -->
+                <div class="mt-6 md:mt-9 text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">OUR SERVICE</h3>
+                    <ul class="list-none text-gray-300">
+                        <li>SMASH REPAIRS</li>
+                        <li>Scratch Repair</li>
+                        <li>Car Spray Painting</li>
+                        <li>BUMPER REPAIRS</li>
+                        <li>DENT REPAIRS</li>
+                        <li>PANEL BEATING</li>
+                        <li>TRUCK REPAIRS</li>
+                        <li>Headlight restoration</li>
+                        <li>Scratch and chip repair</li>
+                    </ul>
+                </div>
+                <!-- Office Location -->
+                <div class="mt-6 text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">OFFICE: Melbourne</h3>
+                    <div class="w-full" style="height: 300px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1587935938446!2d144.96271881539928!3d-37.81444457974584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2sMelbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2s!4v1685364186501!5m2!1sen!2s"
+                            class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-7">
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 MOBILE SMASH REPAIR - Powered by VIRAL BUSINESS</p>
+                <p class="mt-4">PRIVACY POLICY TERMS & CONDITIONS</p>
+            </div>
         </div>
     </footer>
 
 
-    <!-- Footer End -->
-
-
-    <!-- Navbar Start -->
-    <div class="fixed bottom-0 w-full bg-black p-1 sm:hidden mt-16">
-        <div class="flex justify-around">
-            <a href="https://www.caratgallery.in/collection" class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/wedding-ring.png" class="w-6 h-6 mb-1"
-                        alt="Collection">
-                    <span class="text-xs">Collection</span>
-                </div>
-            </a>
-
-            <a href="#contactUsModal" data-toggle="modal" class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/estimate.png" class="w-6 h-6 mb-1"
-                        alt="Get Free Quote">
-                    <span class="text-xs">Get Free Quote</span>
-                </div>
-            </a>
-
-            <a href="tel:7800101010" class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/call-now.png" class="w-6 h-6 mb-1"
-                        alt="Call Now">
-                    <span class="text-xs">Call Now</span>
-                </div>
-            </a>
-
-            <a href="https://api.whatsapp.com/send?text=Hi Carat Gallery! I have enquiry regarding your products.&amp;phone=917355748439"
-                class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/whatsapp.png" class="w-6 h-6 mb-1"
-                        alt="WhatsApp">
-                    <span class="text-xs">WhatsApp</span>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- Navbar End -->
 
 
 
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="../scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
 </body>
+
 </html>

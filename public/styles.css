@@ -1,117 +1,83 @@
-body {
-  font-family: 'Playfair Display', serif;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 2s ease-in-out;
-}
-
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+body{
+  background-image: url(./assets/bac.png);
 }
 
 
 
-@keyframes fadeInFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.bg-item1 {
+  background-image: url('./assets/image2.png');
+  /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
 }
 
-.animate-fadeInFromTop {
-  animation: fadeInFromTop 1.5s ease-in-out;
-}
-
-body {
-  font-family: 'Playfair Display', serif;
-}
-
-.card:hover img {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-@keyframes fadeInFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInFromBottom {
-  animation: fadeInFromBottom 1.5s ease-in-out;
-}
-
-.fade-in-right {
-  animation: fadeInRight 1s ease-in-out;
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hover-golden:hover {
-  color: #FFD700;
-  /* Golden color */
+.bg-item1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
 }
 
 
-/* Define the fade-in animation */
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.glow-border {
+  border-radius: 0.5rem;
+  /* Increase border radius for a more rounded look */
+  box-shadow: 0 0 10px #00BFFF;
+  /* Adjust the color and size for the glow effect */
+  transition: box-shadow 0.3s ease;
+  /* Add transition for smoother hover effect */
 }
 
-/* Apply the fade-in animation to the main element */
-#main-content {
-  animation: fadein 1.5s ease-in-out;
-  /* Adjust the duration and timing function as needed */
+.glow-border:hover {
+  box-shadow: 0 0 30px gold;
+  /* Increase the glow size and change color on hover */
+}
+
+.footer-bg {
+  background-image: url('./assets/Rectangle51.png');
+  background-size: cover;
+  background-position: center;
+}
+
+  /* Add hover effect to the 'Get FREE Estimate' button */
+  .hover-effect:hover {
+    background-color: #f6e05e;
+    color: #000;
 }
 
 
+
+/* Add hover effect to the social media icons */
+.social-icons a:hover {
+    color: #f6e05e;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* About Us Start */
+
+.custom-border {
+  border-top-left-radius: 2.675rem; /* Adjust as needed */
+  border-top-right-radius: 2.675rem; /* Adjust as needed */
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}

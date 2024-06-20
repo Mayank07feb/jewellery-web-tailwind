@@ -4,604 +4,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carat Gallery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Responsive Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="../src/styles.css">
-</head>
 
+</head>
 
 <body>
 
-
-
-    <!--Header Start-->
-    <header class="bg-black text-white py-4 px-8 flex justify-between items-center">
-        <div class="text-2xl font-bold text-yellow-500">
-            Carat Gallery
-        </div>
-        <nav class="hidden md:flex space-x-8">
-            <a href="#" class="hover:text-yellow-500">HOME</a>
-            <a href="./otherpages/about.html" class="hover:text-yellow-500">ABOUT</a>
-            <a href="./otherpages/gallery.html" class="hover:text-yellow-500">CARAT GALLERY CLUB</a>
-            <a href="./otherpages/collection.html" class="hover:text-yellow-500">COLLECTION</a>
-            <a href="./otherpages/contact.html" class="hover:text-yellow-500">CONTACT</a>
+    <!-- Header Start-->
+    <header id="site-header"
+        class="bg-yellow-600 text-white p-2 flex justify-between fixed items-center w-full top-0 z-50">
+        <nav class="flex space-x-4 sm:space-x-10 ml-4 sm:ml-24">
+            <a href="#" class="hover:text-orange-500" aria-label="Instagram"><span class="fab fa-instagram"></span></a>
+            <a href="#" class="hover:text-orange-500" aria-label="Facebook"><span class="fab fa-facebook"></span></a>
+            <a href="#" class="hover:text-orange-500" aria-label="Twitter"><span class="fab fa-twitter"></span></a>
         </nav>
-        <a href="#"
-            class="hidden md:inline-block bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
-            Get A Quote
-        </a>
-        <button id="menu-toggle" class="md:hidden text-yellow-500 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
+        <div class="hidden sm:flex items-center space-x-2">
+            <span class="font-bold">0450165205</span>
+            <a href="#" aria-label="Account" class="material-icons hover:text-orange-500">person</a>
+        </div>
+        <div class="sm:hidden">
+            <a href="#" aria-label="Account" class="material-icons hover:text-orange-500">person</a>
+        </div>
     </header>
-    <nav id="mobile-menu" class="hidden md:hidden bg-black text-white space-y-4 px-8 py-4">
-        <a href="#" class="block hover:text-yellow-500">HOME</a>
-        <a href="./otherpages/about.html" class="block hover:text-yellow-500">ABOUT</a>
-        <a href="./otherpages/gallery.html" class="block hover:text-yellow-500">CARAT GALLERY CLUB</a>
-        <a href="./otherpages/collection.html" class="block hover:text-yellow-500">COLLECTION</a>
-        <a href="./otherpages/contact.html" class="block hover:text-yellow-500">CONTACT</a>
-        <a href="#"
-            class="block bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
-            Get A Quote
-        </a>
+    <!-- Header End-->
+
+
+
+    <!-- Navbar Start-->
+
+    <nav class="bg-red-50 shadow-lg fixed w-full top-10 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#"><img src="./assets/logo.png" alt="Logo" class="h-16"></a>
+            <div class="flex flex-1 justify-center items-center">
+                <ul class="hidden md:flex space-x-8 text-blue-500 text-lg">
+                    <li><a href="#" class="hover:text-orange-500">HOME</a></li>
+                    <li><a href="./otherpages/about.html" class="hover:text-orange-500">ABOUT</a></li>
+                    <li><a href="./otherpages/services.html" class="hover:text-orange-500">SERVICES</a></li>
+                    <li><a href="./otherpages/contact.html" class="hover:text-orange-500">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#"
+                    class="hidden md:block bg-yellow-600 text-white py-2 px-4 rounded-full hover:bg-orange-500">Get FREE
+                    Estimate</a>
+                <button id="menu-button" class="md:hidden text-blue-500 focus:outline-none">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul class="text-blue-500 flex flex-col space-y-4 p-4">
+                <li><a href="#" class="hover:text-orange-500">HOME</a></li>
+                <li><a href="./otherpages/about.html" class="hover:text-orange-500">ABOUT</a></li>
+                <li><a href="./otherpages/services.html" class="hover:text-orange-500">SERVICES</a></li>
+                <li><a href="./otherpages/contact.html" class="hover:text-orange-500">CONTACT</a></li>
+                <li><a href="#" class="bg-yellow-600 text-white py-2 px-4 rounded-full hover:bg-orange-500">Get FREE
+                        Estimate</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!--Header End-->
-
-    <main id="main-content">
-
-        <!--Slider Start-->
-
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/Carat-Gallery-Slider-1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/Carat-Gallery-Slider-2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/Carat-Gallery-Slider-3.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <!--Slider End-->
+    <!-- Navbar End-->
 
 
 
+    <!-- Main Content -->
+    <main class="mt-32">
 
 
-
-        <!--About Start-->
-
-        <section class="bg-yellow-200 text-gray-900">
-            <div class="container mx-auto px-6 py-12 md:flex md:items-center">
-                <div class="md:w-1/2 md:pr-12 animate-fadeIn">
-                    <h1 class="text-5xl font-bold leading-tight mb-4">
-                        SERVICE BEYOND <br> COMPARE SINCE <br> <span class="text-6xl text-gray-700">1940</span>
-                    </h1>
-                    <p class="text-lg leading-relaxed mb-6">
-                        We are the 5th generation having paternal business since 1940, has made it their mission to
-                        strive
-                        every
-                        day to earn the confidence and trust of our clients by meeting and exceeding their expectations
-                        of
-                        quality, service, and unsurpassed value. We ensure our actions are consistent with our Corporate
-                        Values,
-                        enabling us to maintain the relationships and reputation, which our family-owned firm has
-                        developed
-                        throughout our history.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        The foundation of a family business, and the basis on which our company has grown; an emphasis
-                        on
-                        personalization and strong ties to our clients, industry, and communities,Carat Gallery Diamonds
-                        an
-                        enterprise of Rishabh Chand Sudhir Kumar Jain Sarraf provides our clients with more than they
-                        imagined for less than they anticipate.
-                    </p>
-                </div>
-                <div class="md:w-1/2 mt-8 md:mt-0 animate-fadeIn">
-                    <img src="./assets/about-side.jpg" alt="Jewelry Image" class="w-full h-auto rounded-lg shadow-lg">
-                </div>
-            </div>
-        </section>
-
-
-        <!--About End-->
-
-
-        <!--Browse Our Popular Collections Start-->
-
-        <div class="w-full mx-auto py-12 bg-red-100">
-            <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">Browse Our Popular Collections</h1>
-            <div class="md:w-90 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 w-5/6">
-
-                <!-- Rings Card -->
-                <div>
-                    <div
-                        class="bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="./assets/ring.jpeg" alt="Rings" class="w-full h-80 object-cover rounded-t-lg">
-                    </div>
-                    <h3 class="text-lg font-semibold mt-4 mb-2 text-center">Rings</h3>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#"
-                            class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center">
-                            View Products
-                        </a>
-                    </div>
-                </div>
-                <!-- Necklaces Card -->
-                <div>
-                    <div
-                        class="bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="./assets/neckless.jpeg" alt="Necklaces" class="w-full h-80 object-cover rounded-t-lg">
-                    </div>
-                    <h3 class="text-lg font-semibold mt-4 mb-2 text-center">Necklaces</h3>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#"
-                            class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center">
-                            View Products
-                        </a>
-                    </div>
-                </div>
-                <!-- Earrings Card -->
-                <div>
-                    <div
-                        class="bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="./assets/earing.jpeg" alt="Earrings" class="w-full h-80 object-cover rounded-t-lg">
-                    </div>
-                    <h3 class="text-lg font-semibold mt-4 mb-2 text-center">Earrings</h3>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#"
-                            class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center">
-                            View Products
-                        </a>
-                    </div>
-                </div>
-                <!-- Bracelets Card -->
-                <div>
-                    <div
-                        class="bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="./assets/bracelet.jpeg" alt="Bracelets" class="w-full h-80 object-cover rounded-t-lg">
-                    </div>
-                    <h3 class="text-lg font-semibold mt-4 mb-2 text-center">Bracelets</h3>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#"
-                            class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center">
-                            View Products
-                        </a>
-                    </div>
-                </div>
-                <!-- Pendant Set Card -->
-                <div>
-                    <div
-                        class="bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="./assets/pendant.jpeg" alt="Pendant Set"
-                            class="w-full h-80 object-cover rounded-t-lg">
-                    </div>
-                    <h3 class="text-lg font-semibold mt-4 mb-2 text-center">Pendant Set</h3>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#"
-                            class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center">
-                            View Products
-                        </a>
-                    </div>
-                </div>
-                <!-- Bangles Card -->
-                <div>
-                    <div
-                        class="bg-white shadow-lg rounded-lg transform hover:scale-105 transition-transform duration-300">
-                        <img src="./assets/bangles.jpeg" alt="Bangles" class="w-full h-80 object-cover rounded-t-lg">
-                    </div>
-                    <h3 class="text-lg font-semibold mt-4 mb-2 text-center">Bangles</h3>
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#"
-                            class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
-                            aria-label="Contact via Phone">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center">
-                            View Products
-                        </a>
+        <!--ANY KIND OF CAR YOU WILL GET START-->
+        <div class="relative">
+            <div class="comeback">
+                <div class="bg-item1 h-screen flex items-center relative">
+                    <div class="container mx-auto text-center text-white relative z-10 px-4">
+                        <span class="block text-yellow-400 text-lg sm:text-xl mb-2">ANY KIND OF CAR YOU WILL GET</span>
+                        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">ON-SITE PROFESSIONAL <br> CAR BODY
+                            WORKS</h1>
+                        <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4 mt-10">
+                            <a href="contact.html"
+                                class="bg-yellow-500 hover:bg-orange-500 font-bold text-2xl text-white py-2 px-8 rounded-xl">SERVICES</a>
+                            <a href="contact.html"
+                                class="bg-blue-500 hover:bg-orange-500 font-bold text-2xl text-white py-2 px-8 rounded-xl">ENQUIRY</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!--Browse Our Popular Collections End-->
-
-
-
-        <!--Why Buy From Us? Start-->
-
-
-        <div class="bg-gray-100 animate-fadeInFromTop">
-            <div class="container mx-auto py-16">
-                <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Why Buy From Us?</h1>
-                <p class="text-center mb-12 mx-auto max-w-2xl text-gray-600">With an exclusive collection of finely
-                    crafted
-                    jewellery that makes you go head over heels in one glance, our offerings include rings, earrings,
-                    pendants, mangalsutras, bangles, bracelets, nose pins, necklaces, etc.</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div
-                        class="card text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <img src="./assets/ethical.jpg" alt="Exclusive Collections"
-                            class="mx-auto mb-4 w-full h-48 object-cover rounded-lg">
-                        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Exclusive Collections</h2>
-                        <p class="text-gray-500">Discover unique and elegant designs curated just for you.</p>
+            <div class="container mx-auto px-4 lg:px-40 comefront relative z-20" style="margin-top: -30px;">
+                <div class="flex flex-wrap justify-center items-center bg-white shadow-lg rounded-2xl p-4 md:p-6"
+                    style="z-index: 10; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);">
+                    <div class="w-full md:w-auto flex-shrink-0 mb-4 md:mb-0">
+                        <img src="./assets/yeelowcar.png" alt="Yellow Car" class="mx-auto h-32 md:h-44">
                     </div>
-                    <div
-                        class="card text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <img src="./assets/Exclusive-Range.jpg" alt="Ethical And Transparent"
-                            class="mx-auto mb-4 w-full h-48 object-cover rounded-lg">
-                        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Ethical And Transparent</h2>
-                        <p class="text-gray-500">We ensure ethical sourcing and complete transparency in our processes.
-                        </p>
+                    <div class="mx-6 text-center">
+                        <h3 class="text-xl md:text-2xl font-bold mb-2">GET YOUR FREE ESTIMATE NOW</h3>
+                        <h4 class="text-md md:text-lg text-yellow-500 font-bold mb-2">SIMPLY SEND US PHOTOS OF THE
+                            DAMAGE!</h4>
+                        <h5 class="text-sm md:text-base mb-2">quote@mobilesmashrepair.com</h5>
+                        <h5 class="text-sm md:text-base mb-4">OR</h5>
+                        <button class="bg-yellow-500 hover:bg-orange-500 text-white py-2 px-4 rounded-full">CLICK
+                            HERE</button>
                     </div>
-                    <div
-                        class="card text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <img src="./assets/Jewellery-desire.jpg" alt="Lifelong Relationship"
-                            class="mx-auto mb-4 w-full h-48 object-cover rounded-lg">
-                        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Lifelong Relationship</h2>
-                        <p class="text-gray-500">Our commitment is to build lifelong relationships with our customers.
-                        </p>
-                    </div>
-                    <div
-                        class="card text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <img src="./assets/Lifelong-Relationship.jpg" alt="Jewellery You Desire"
-                            class="mx-auto mb-4 w-full h-48 object-cover rounded-lg">
-                        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Jewellery You Desire</h2>
-                        <p class="text-gray-500">Find the perfect piece that resonates with your style and personality.
-                        </p>
+                    <div class="w-full md:w-auto flex-shrink-0 mt-4 md:mt-0">
+                        <img src="./assets/bluecar.png" alt="Blue Car" class="mx-auto h-32 md:h-44">
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <!--Why Buy From Us? End-->
+        <!--ANY KIND OF CAR YOU WILL GET END-->
 
 
 
-        <!--ENJOY THE MOMENT START-->
+        <!--Mobile Smash Repair Start-->
 
-        <div class="bg-red-100 animate-fadeInFromTop">
-            <div class="container mx-auto py-16 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 p-6 text-center md:text-left">
-                    <h1 class="text-4xl md:text-7xl font-bold text-gray-800 mb-6">ENJOY THE MOMENT</h1>
-                    <p class="text-gray-700 mb-6 text-2xl">Why not make every moment special? Our life is meaningless
-                        without those that we share. Let them know how much they mean to <strong>YOU</strong>.</p>
-                    <p class="text-gray-700 mb-6 text-2xl">Exclusive & Personalised just for you to feel your inner
-                        <strong>JOY</strong>.
-                    </p>
-                    <button
-                        class="mt-4 bg-yellow-500 text-white py-2 px-6 rounded-full hover:bg-yellow-600 hover:shadow-lg transition duration-300">Explore
-                        Our Collection</button>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="./assets/enjoy-the-movment.jpg" alt="Woman with Jewellery" class="w-full rounded-lg">
-                </div>
-            </div>
-        </div>
-
-        <!--ENJOY THE MOMENT END-->
-
-
-
-
-        <!--OUR BEST SMILES START-->
-
-
-        <div class="bg-black text-white animate-fadeInFromTop"
-            style="background-image: url('./assets/bg-smile.png'); background-size: cover; background-position: center; height: 350px;">
-            <div class="container mx-auto py-16 flex flex-col md:flex-row items-center">
-                <div class="">
-                    <h1 class="text-5xl font-bold mb-6">OUR BEST SMILES</h1>
-                    <p class="text-gray-400 mb-6">Experience artisanal joy for the vibrant soul.</p>
-                    <button
-                        class="mt-5 bg-yellow-500 text-black py-2 px-6 rounded-full animate-fadeInFromBottom hover-bg-rose-gold hover:shadow-lg transition duration-300">Discover
-                        More</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!--OUR BEST SMILES END-->
-
-
-        <!--Your Organization Name Start-->
-
-
-        <div class="container mx-auto p-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="mb-4 md:mb-0 md:w-1/2 md:order-1">
-                    <img src="./assets/logo-igi.png" alt="Your Logo" class="h-30 md:h-40 lg:h-40 xl:h-50 rounded-lg ">
-                </div>
-                <div class="md:w-1/2 md:order-2 fade-in-right overflow-auto">
-                    <h1 class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Your Organization Name</h1>
-                    <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
-                        Diamond is the only gem made of a single element: It is <span
-                            class="font-bold text-gray-800">typically about 99.95 percent carbon</span>.
-                        The other 0.05 percent can include one or more trace elements, which are atoms that aren’t part
-                        of
-                        the diamond’s essential chemistry.
-                        Some trace elements can influence its color or crystal shape.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <!--Your Organization Name End-->
-
-
-        <!--Handmade Jewellery Start-->
-
-        <div class="bg-red-100 py-6 animate-fadeInFromTop">
+        <div class="py-8 lg:py-16">
             <div class="container mx-auto">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 mb-6 md:mb-0 mt-20">
-                        <h1 class="mb-4 text-5xl">
-                            <span>Handmade Jewellery</span><br>
-                            Made With Love
-                        </h1>
-                        <p class="text-lg leading-relaxed mb-4 text-black">
-                            Necklaces may have been one of the earliest types of adornment worn by humans. They often
-                            serve
-                            ceremonial, religious, magical, or funerary purposes and are also used as symbols of wealth
-                            and
-                            status, given that they are commonly made of precious metals and stones.
+                <div class="text-center lg:text-left">
+                    <h2 class="text-4xl lg:text-6xl font-bold">
+                        About <span class="text-blue-600">Mobile Smash Repair</span>
+                    </h2>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center lg:items-start pt-8 lg:pt-12">
+                    <div class="lg:w-1/2 p-4">
+                        <p class="text-base lg:text-lg font-medium leading-relaxed">
+                            With over two decades of hands-on experience in vehicle spray painting and automotive body
+                            repairs,
+                            Mobile Smash Repair proudly stands as one of Melbourne's most reliable mobile panel beaters,
+                            spray
+                            painters, and dent, bumper, and scratch repair experts.
                         </p>
-                        <a class="btn btn-sm py-2 px-4 rounded-full bg-yellow-500 text-white hover:bg-yellow-600 transition duration-300"
-                            href="#">
-                            Our Collection
-                        </a>
+                        <p class="mt-4 text-base lg:text-lg font-medium leading-relaxed">
+                            Whether you have a company car or your own ride, we promise to give you top-notch service.
+                            We take
+                            pride in doing a great job and making sure you're happy with our work every time. Our
+                            service is
+                            affordable and we come to you, making it super convenient. We're so confident in our skills
+                            that we
+                            guarantee our work for as long as you own your car. Our team of skilled technicians only use
+                            the
+                            best materials and tools to make sure your car looks as good as new.
+                        </p>
+                        <div class="mt-6 lg:mt-8">
+                            <a href="contact.html"
+                                class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all">LEARN
+                                MORE</a>
+                        </div>
                     </div>
-                    <div class="md:w-1/2 fade-in-right">
-                        <img src="./assets/indian-traditional-jewellery.jpg" alt="Handmade Jewellery"
-                            class="w-full rounded-lg">
+                    <div class="lg:w-1/2 p-4">
+                        <img src="./assets/van.png" alt="Mobile Smash Repair Van" class="mx-auto lg:mx-0">
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--Mobile Smash Repair End-->
 
 
-        <!--Handmade Jewellery End-->
+        <!--WHAT WE OFFER Start-->
 
+        <div class="container mx-auto py-8 w-10/12">
+            <div class="section-title text-center mb-8">
+                <h2 class="text-5xl font-bold text-yellow-500">WHAT WE OFFER</h2>
+                <p class="mt-5 font-semibold text-lg">
+                    Renew the beauty of your car with our exceptional scratch repair solutions. Our highly trained
+                    technicians utilize state-of-the-art methods to erase scratches and flaws, leaving your vehicle
+                    looking flawless once again. Your satisfaction is our promise, ensuring you leave with a smile on
+                    your face!
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="bg-white rounded-lg p-6 text-center glow-border">
+                    <img src="./assets/Car Crash.png" alt="Smash Repair"
+                        class="w-20 h-20 mx-auto mb-6 rounded-full border-4 border-blue-500">
+                    <h3 class="text-3xl font-bold text-blue-500 mb-4">SMASH REPAIR</h3>
+                    <p class="text-gray-600 mb-4 font-semibold">For expert car smash repairs, trust the specialists at
+                        The Mobile Smash Repair Melbourne! We bring our skills right to your location, whether it's for
+                        minor touch-ups or major fixes. Your car will be restored quickly...</p>
+                    <a href="#"
+                        class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">LEARN
+                        MORE</a>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center glow-border">
+                    <img src="./assets/Car.png" alt="Scratch Repair"
+                        class="w-20 h-20 mx-auto mb-6 rounded-full border-4 border-yellow-500">
+                    <h3 class="text-3xl font-bold text-yellow-500 mb-4">SCRATCH REPAIR</h3>
+                    <p class="text-gray-600 mb-4 font-semibold">Mobile Smash Car Based in Melbourne, specializes in
+                        scratch repair services to freshen up your car's look. Whether it's a small mark or a noticeable
+                        scratch, our skilled team uses modern techniques to ensure your vehicle looks...</p>
+                    <a href="#"
+                        class="inline-block bg-yellow-500 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded">LEARN
+                        MORE</a>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center glow-border">
+                    <img src="./assets/Car Crash.png" alt="Dent Repair"
+                        class="w-20 h-20 mx-auto mb-6 rounded-full border-4 border-pink-500">
+                    <h3 class="text-3xl font-bold text-pink-500 mb-4">DENT REPAIR</h3>
+                    <p class="text-gray-600 mb-4 font-semibold">In the heart of Melbourne, Mobile Smash Repair is your
+                        ultimate destination for dent repair services that will breathe new life into your beloved
+                        vehicle. Whether it's a minor dent or a more substantial dent, our skilled...</p>
+                    <a href="#"
+                        class="inline-block bg-pink-500 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded">LEARN
+                        MORE</a>
+                </div>
+            </div>
+        </div>
 
+        <!--WHAT WE OFFER End-->
 
+        <!--GET A TECHNICIAN Start-->
 
-        <!--Questions? Call Now Start-->
-
-        <section class="py-8 bg-gray-100">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-semibold mb-6">Questions? Call Now</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div
-                        class="flex items-center justify-center space-x-2 bg-white rounded-lg shadow-lg py-4 px-6 hover:shadow-xl transition duration-300">
-                        <i class="fas fa-phone-alt text-lg text-blue-500"></i>
-                        <span class="text-lg ml-2 font-medium">+91 7800101010</span>
+        <div class="bg-cover"
+            style="background-image: url('./assets/image1.png'); background-color: rgba(0, 0, 0, 0.8);">
+            <div class="container mx-auto py-16 w-10/12">
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                    <!-- Get a Technician -->
+                    <div class="bg-yellow-400 text-white text-center p-8 rounded-lg shadow-lg h-full w-full">
+                        <div class="text-5xl mb-4">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">GET A TECHNICIAN</h2>
+                        <p class="mb-6 font-bold">After scheduling your appointment, one of our technicians will arrive
+                            to repair your
+                            vehicle. We'll guide you through the process & relax while we work on restoring your car to
+                            its
+                            optimal condition.</p>
+                        <button class="bg-white text-black font-bold py-2 px-4 rounded-full">CALL NOW</button>
                     </div>
-                    <div
-                        class="flex items-center justify-center space-x-2 bg-white rounded-lg shadow-lg py-4 px-6 hover:shadow-xl transition duration-300">
-                        <i class="fas fa-envelope text-lg text-green-500"></i>
-                        <span class="text-lg ml-2 font-medium">inforcskjs@gmail.com</span>
+                    <!-- Make an Appointment -->
+                    <div class="bg-blue-500 text-white text-center p-8 rounded-lg shadow-lg h-full w-full">
+                        <div class="text-5xl mb-4">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">MAKE AN APPOINTMENT</h2>
+                        <p class="mb-6 font-bold">Feel free to contact us via phone or email to schedule a convenient
+                            time and place.
+                            We're here to assist you with any inquiries or requests you may have.</p>
+                        <button class="bg-white text-black font-bold py-2 px-4 rounded-full">CALL NOW</button>
                     </div>
-                    <div
-                        class="flex items-center justify-center space-x-2 bg-white rounded-lg shadow-lg py-4 px-6 hover:shadow-xl transition duration-300">
-                        <i class="fab fa-whatsapp text-lg text-yellow-500"></i>
-                        <span class="text-lg ml-2 font-medium">+91 7800101010</span>
+                    <!-- Get a Quote -->
+                    <div class="bg-yellow-400 text-white text-center p-8 rounded-lg shadow-lg h-full w-full">
+                        <div class="text-5xl mb-4">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">GET A QUOTE</h2>
+                        <p class="mb-6 font-bold">Feel free to send us some photos of the damage along with a brief
+                            description. We'll
+                            promptly provide you with a quote for the repair service you need.</p>
+                        <button class="bg-white text-black font-bold py-2 px-4 rounded-full">CALL NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--GET A TECHNICIAN End-->
+
+
+        <!--OUR GALLERY START-->
+        <div class="full-width py-12">
+            <div class="text-center mb-8">
+                <h1 class="text-6xl font-bold text-yellow-500">OUR GALLERY</h1>
+                <p class="mt-4 font-bold mx-auto w-8/12">
+                    Experience the magic of Mobile Smash Company's car repair services – where we transform damaged
+                    vehicles into showroom-ready masterpieces. Our skilled technicians and cutting-edge techniques
+                    guarantee jaw-dropping results, leaving your car looking better than ever before.
+                </p>
+            </div>
+            <div class="flex justify-center space-x-8 ml-6">
+                <div class="w-1/3">
+                    <img src="./assets/Rectangle 41.png" alt="Before and After 1"
+                        class="rounded-lg shadow-lg custom-img hover:scale-110 transition duration-300 ease-in-out">
+                </div>
+                <div class="w-1/3">
+                    <img src="./assets/Rectangle 42.png" alt="Before and After 2"
+                        class="rounded-lg shadow-lg custom-img hover:scale-110 transition duration-300 ease-in-out">
+                </div>
+                <div class="w-1/3">
+                    <img src="./assets/Rectangle 40.png" alt="Before and After 3"
+                        class="rounded-lg shadow-lg custom-img hover:scale-110 transition duration-300 ease-in-out">
+                </div>
+            </div>
+        </div>
+        <!--OUR GALLERY END-->
+
+
+
+
+
+
+        <!--Testimonial start-->
+        <div class="flex justify-center items-center min-h-screen"
+            style="background-image: url(./assets/Rectangle43.png); background-size: cover;">
+            <div class="container mx-auto py-16 px-4 text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-yellow-500 mb-12 text-center">WHAT OUR CLIENTS SAY</h2>
+                <div class="swiper-container max-w-screen-xl mx-auto md:mx-0 overflow-hidden">
+                    <div class="swiper-wrapper space-x-4 md:space-x-8">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto md:mx-0">
+                            <div class="text-yellow-500 text-3xl mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6">Restore your car's pristine finish with our expert scratch
+                                repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good
+                                as new. Satisfaction guaranteed.</p>
+                            <p class="font-bold">Menny Tee</p>
+                            <div class="text-yellow-500 mt-2 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="border-t-8 border-yellow-400 mt-4"></div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto md:mx-0">
+                            <div class="text-yellow-500 text-3xl mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6">Restore your car's pristine finish with our expert scratch
+                                repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good
+                                as new. Satisfaction guaranteed.</p>
+                            <p class="font-bold">Menny Tee</p>
+                            <div class="text-yellow-500 mt-2 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="border-t-8 border-yellow-400 mt-4"></div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto md:mx-0">
+                            <div class="text-yellow-500 text-3xl mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6">Restore your car's pristine finish with our expert scratch
+                                repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good
+                                as new. Satisfaction guaranteed.</p>
+                            <p class="font-bold">Menny Tee</p>
+                            <div class="text-yellow-500 mt-2 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="border-t-8 border-yellow-400 mt-4"></div>
+                        </div>
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto md:mx-0">
+                            <div class="text-yellow-500 text-3xl mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6">Restore your car's pristine finish with our expert scratch
+                                repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good
+                                as new. Satisfaction guaranteed.</p>
+                            <p class="font-bold">Menny Tee</p>
+                            <div class="text-yellow-500 mt-2 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="border-t-8 border-yellow-400 mt-4"></div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto md:mx-0">
+                            <div class="text-yellow-500 text-3xl mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6">Restore your car's pristine finish with our expert scratch
+                                repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good
+                                as new. Satisfaction guaranteed.</p>
+                            <p class="font-bold">Menny Tee</p>
+                            <div class="text-yellow-500 mt-2 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="border-t-8 border-yellow-400 mt-4"></div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto md:mx-0">
+                            <div class="text-yellow-500 text-3xl mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6">Restore your car's pristine finish with our expert scratch
+                                repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good
+                                as new. Satisfaction guaranteed.</p>
+                            <p class="font-bold">Menny Tee</p>
+                            <div class="text-yellow-500 mt-2 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="border-t-8 border-yellow-400 mt-4"></div>
+                        </div>
+                        <!-- Add more testimonials here if needed -->
+                    </div>
+                    <!-- Add pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <!--Testimonial End-->
+
+
+
+
+
+        <!--POSTS FROM THE BLOG START-->
+        <section class="text-center py-12">
+            <h1 class="text-6xl font-bold text-yellow-500 mb-4">POSTS FROM THE BLOG</h1>
+            <p class="text-lg font-bold text-gray-700 mb-8">See our updates, news, and new features</p>
+            <div class="container mx-auto px-4">
+                <div id="blogSlider" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="relative group">
+                        <div
+                            class="bg-white shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2">
+                            <img src="./assets/Rectangle 45.png" alt="Blog Image 1" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-blue-500 text-white text-xl font-bold text-center py-4 px-4 z-10"
+                            style="width: 80%;">BLOG TITLE</div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="bg-white shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2">
+                            <img src="./assets/Rectangle 46.png" alt="Blog Image 2" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-blue-500 text-white text-xl font-bold text-center py-4 px-4 z-10"
+                            style="width: 80%;">BLOG TITLE</div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="bg-white shadow-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2">
+                            <img src="./assets/Rectangle 47.png" alt="Blog Image 3" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-blue-500 text-white text-xl font-bold text-center py-4 px-4 z-10"
+                            style="width: 80%;">BLOG TITLE</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--Questions? Call Now End-->
+        <!--POSTS FROM THE BLOG END-->
 
-
-        <!--Map Start-->
-
-
-        <div class="bg-gray-100 text-gray-500 py-6">
-            <div class="container mx-auto">
-                <h2 class="text-2xl font-bold mb-4 text-center">Interactive Map</h2>
-                <div class="w-full h-96 md:h-400px">
-                    <!-- Replace the src attribute with your map embed code -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.8977999071974!2d-122.41941548468712!3d37.77492997975781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e59009e0f03%3A0x73a9d81f161674f!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1628561587444!5m2!1sen!2sus"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-
-
-        <!--Map End-->
 
 
     </main>
 
+    <!--Footer Start-->
 
-
-    <!-- Footer Start -->
-
-
-    <footer class="bg-black text-white py-8">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="text-gray-300">
-                <h2 class="text-lg font-bold mb-4">About</h2>
-                <p>We are the 5th generation having paternal business since 1940, has made it their mission to strive
-                    every day to earn the confidence and trust of our clients by meeting and exceeding their
-                    expectations of quality, service, and unsurpassed value.</p>
-            </div>
-            <div class="text-gray-300">
-                <h2 class="text-lg font-bold mb-4">MENU</h2>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover-golden">Home</a></li>
-                    <li><a href="#" class="hover-golden">About</a></li>
-                    <li><a href="#" class="hover-golden">Carat Gallery Club</a></li>
-                    <li><a href="#" class="hover-golden">Collection</a></li>
-                    <li><a href="#" class="hover-golden">Contact</a></li>
-                </ul>
-            </div>
-            <div class="text-gray-300">
-                <h2 class="text-lg font-bold mb-4">CONTACT US</h2>
-                <address>
-                    <p><strong>Carat Gallery</strong><br>
-                        Arya Nagar, Gorakhpur, Uttar Pradesh,<br>
-                        India, Pin Code: 273001</p>
-                    <p>Mobile No:<br>
-                        <a href="tel:+917800101010" class="hover-golden">+91 7800101010</a>
-                    </p>
-                </address>
-            </div>
+    <footer class="text-white py-8 footer-bg">
+        <!-- Logo and Title -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start px-4 md:px-0">
+            <img src="assets/logo.png" alt="Mobile Smash Repair Logo" class="h-24 w-auto mb-4 md:mb-2 md:ml-16">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-4 md:ml-10 text-center md:text-left">
+                ON-SITE PROFESSIONAL <br> CAR BODY WORKS
+            </h2>
         </div>
-        <div
-            class="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>Copyright © 1940 - 2024 <strong>Carat Gallery</strong>. All Rights Reserved.</p>
-            <p>Design & Developed By <a href="#" class="hover-golden">CodesGesture</a></p>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div class="mt-6 md:mt-10 text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">CONTACT INFO</h3>
+                    <p class="text-lg"><span class="font-bold">Phone No:</span> 0450165205</p>
+                    <p class="text-lg"><span class="font-bold">Email:</span> quote@mobilesmashrepair.com</p>
+                    <a href="#"
+                        class="bg-yellow-500 text-white py-2 font-semibold px-4 rounded-md hover-effect mt-4 inline-block">Get
+                        FREE Estimate</a>
+                    <div class="flex justify-center md:justify-start items-center mt-8 space-x-4">
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+                <!-- Our Service -->
+                <div class="mt-6 md:mt-9 text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">OUR SERVICE</h3>
+                    <ul class="list-none text-gray-300">
+                        <li>SMASH REPAIRS</li>
+                        <li>Scratch Repair</li>
+                        <li>Car Spray Painting</li>
+                        <li>BUMPER REPAIRS</li>
+                        <li>DENT REPAIRS</li>
+                        <li>PANEL BEATING</li>
+                        <li>TRUCK REPAIRS</li>
+                        <li>Headlight restoration</li>
+                        <li>Scratch and chip repair</li>
+                    </ul>
+                </div>
+                <!-- Office Location -->
+                <div class="mt-6 text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">OFFICE: Melbourne</h3>
+                    <div class="w-full" style="height: 300px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1587935938446!2d144.96271881539928!3d-37.81444457974584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2sMelbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2s!4v1685364186501!5m2!1sen!2s"
+                            class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-7">
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 MOBILE SMASH REPAIR - Powered by VIRAL BUSINESS</p>
+                <p class="mt-4">PRIVACY POLICY TERMS & CONDITIONS</p>
+            </div>
         </div>
     </footer>
 
-
-    <!-- Footer End -->
-
-
-
-    <!-- Navbar Start -->
-    <div class="fixed bottom-0 w-full bg-black p-1 sm:hidden mt-16">
-        <div class="flex justify-around">
-            <a href="https://www.caratgallery.in/collection" class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/wedding-ring.png" class="w-6 h-6 mb-1"
-                        alt="Collection">
-                    <span class="text-xs">Collection</span>
-                </div>
-            </a>
-
-            <a href="#contactUsModal" data-toggle="modal" class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/estimate.png" class="w-6 h-6 mb-1"
-                        alt="Get Free Quote">
-                    <span class="text-xs">Get Free Quote</span>
-                </div>
-            </a>
-
-            <a href="tel:7800101010" class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/call-now.png" class="w-6 h-6 mb-1"
-                        alt="Call Now">
-                    <span class="text-xs">Call Now</span>
-                </div>
-            </a>
-
-            <a href="https://api.whatsapp.com/send?text=Hi Carat Gallery! I have enquiry regarding your products.&amp;phone=917355748439"
-                class="text-bold text-white text-decoration-none p-2">
-                <div class="flex flex-col items-center">
-                    <img src="https://www.caratgallery.in/assets/img/icons/whatsapp.png" class="w-6 h-6 mb-1"
-                        alt="WhatsApp">
-                    <span class="text-xs">WhatsApp</span>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- Navbar End -->
+    <!--Footer End-->
 
 
 
+    <!-- Add Swiper JS and CSS files -->
 
-    <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./scripts.js"></script>
 
 </body>
 
